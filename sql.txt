@@ -1,0 +1,93 @@
+Marcel Maik kl: 1FOTP
+F1
+Tabela 1: Kierowcy
+	ID 	int
+	Imię		var(25)
+	Nazwisko 	var(25)
+	Narodowość		char
+	Wiek	int
+	Data_Urodzenia	Date
+	Start_Kariery		Date
+	Zespół	char
+	Numer	Int(2)
+	Ilość_Zwycięstw	int
+
+Tabela 2: Zespoły
+	ID	int
+	Nazwa	char
+	Data_Założenia	datę
+	Założyciel	var(60)
+	Szef(Teraz)	var(60)
+	Ilość_Kierowców	int
+	ilość_Zwycięstw	int
+	Ilość_sponsorów	int
+	
+	
+	
+Tabela 3: Sponsorzy
+	ID	int
+	Nazwa	var(30)
+	Kogo_Sponsorują 		char
+	data_roz_Sponsoringu 	date
+	
+	
+	
+Tabela 4: Tory
+	ID	int
+	Kraj		var(50)
+	Miasto	var(50)
+	Długość_Toru(km)		float
+	ilość_wyścigów	int
+	
+	
+Tabela 5: Wyścigi
+	ID	int
+	Data wyścigu		date
+	Czas(Długość wyścigu w min)	int
+	Ilość wypadków	int
+	Kto_Zwyciężył	var(50)
+	Najszybsze_okrążenie		 float
+	Pogoda 		ENUM(Deszcz, Brak deszczu)
+	ilość_PitStopów 		int
+	Najszybszy_PitStop 	(czas) 		float
+	
+
+Tabela 6:  Samochody
+	Id	int
+	Zespół	char
+	Marka	var(50)
+	Silnik	var(50)
+	Koła 	set(białe, żółte, czerwone, niebieskie, zielone)
+	Zawieszenie		var(50)
+	
+Tabela 7: Kary
+	id	int
+	Kara_dla 	char
+	Nazwa_kary	var(50)	
+	Przyczyna_kary	text
+	Co_trzeba zrobić		text
+	
+
+Tabela 8: Transakcje od sponsorów
+	Id	int
+	nazwa_sponsora var(50)
+	Dla_zespołu char
+	kwota float
+	data_transakcji date
+	przyczyna_transakcji text
+	 
+Tabela 9: Badania_Samochodów
+	id	int
+	Zgodzniść_z_regulaminem char
+	waga 	float	
+	tunel_aerodynamiczny char
+	przepływ_powietrza var(40)
+
+Tabela 10: Badania_Kierowców
+	id	int
+	Imię i nazwisko kierowcy 	var(50)
+	badania krwi 		enum(dobrze, źle)
+	test_wytrzymałości	enum(dobrze, źle)
+	Waga_przed	float
+	Waga_po	float
+	
